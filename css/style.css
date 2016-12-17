@@ -11,7 +11,7 @@
 /*Header*/
 
 .header .slider {
-    height: 600px;
+    height: 663px;
     background-color: #eee;
     background-image: url('../images/slider.jpg');
     -webkit-background-size: cover;
@@ -19,7 +19,7 @@
 }
 
 .header .slider .intro {
-    height: 600px;
+    height: 663px;
     padding-top: 200px;
     text-align: center;
     color: #fff;
@@ -27,7 +27,7 @@
 
 .header .slider .intro h2 {
     font-size: 50px;
-    width: 600px;
+    width: 663px;
     margin: 0 auto;
     padding: 5px 0;
     text-transform: capitalize;
