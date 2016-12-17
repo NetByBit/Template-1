@@ -1,0 +1,39 @@
+{
+  "name": "template-1",
+  "version": "1.0.0",
+  "description": "a simple template using HTML CSS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/merodiro/Template-1.git"
+  },
+  "keywords": [
+    "template",
+    "html",
+    "css",
+    "js",
+    "font-awesome"
+  ],
+  "author": "Amr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/merodiro/Template-1/issues"
+  },
+  "homepage": "https://github.com/merodiro/Template-1#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.5",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-cache": "^0.4.5",
+    "gulp-gh-pages": "^0.5.4",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-uncss": "^1.0.6",
+    "gulp-useref": "^3.1.2",
+    "lazypipe": "^1.0.1",
+    "run-sequence": "^1.2.2"
+  }
+}
