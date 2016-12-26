@@ -17,8 +17,8 @@ var lazypipe = require('lazypipe');
 var cssTasks = lazypipe()
     .pipe(uncss, {
                 html: ['*.html']
-            })
-    .pipe(cssnano)
+            });
+    .pipe(cssnano);
 
 
 
@@ -28,7 +28,7 @@ gulp.task('useref', function(){
   return gulp.src('*.html')
     .pipe(useref())
     .pipe(gulpIf('*.css', cssTasks()))
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest('dist'));
 });
 
 gulp.task('browserSync', function() {
@@ -36,8 +36,8 @@ gulp.task('browserSync', function() {
     server: {
       baseDir: './'
     },
-  })
-})
+  });
+});
 
 gulp.task('watch', ['browserSync'], function (){
   gulp.watch('css/**/*.css', browserSync.reload);
@@ -51,17 +51,17 @@ gulp.task('images', function(){
   .pipe(cache(imagemin({
       interlaced: true
     })))
-  .pipe(gulp.dest('dist/images'))
+  .pipe(gulp.dest('dist/images'));
 });
 
 gulp.task('fonts', function() {
   return gulp.src('fonts/**/*')
-  .pipe(gulp.dest('dist/fonts'))
-})
+  .pipe(gulp.dest('dist/fonts'));
+});
 
 gulp.task('clean:dist', function() {
   return del.sync('dist');
-})
+});
 
 gulp.task('deploy', function() {
   return gulp.src('./dist/**/*')
@@ -72,11 +72,11 @@ gulp.task('build', function (callback) {
   runSequence('clean:dist',
     ['useref', 'images', 'fonts'],
     callback
-  )
-})
+  );
+});
 
 gulp.task('default', function (callback) {
   runSequence(['browserSync', 'watch'],
     callback
-  )
-})
+  );
+});
